@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5B4B3541A3ECCC4008C689B /* AutoSuggestionTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4B3531A3ECCC4008C689B /* AutoSuggestionTextField.m */; };
+		F5FF08FF1A3EC9E200E8755C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FF08FE1A3EC9E200E8755C /* main.m */; };
+		F5FF09291A3ECB7900E8755C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5FF09251A3ECB7900E8755C /* Images.xcassets */; };
+		F5FF092A1A3ECB7900E8755C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5FF09271A3ECB7900E8755C /* LaunchScreen.xib */; };
+		F5FF09341A3ECB8700E8755C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FF092E1A3ECB8700E8755C /* AppDelegate.m */; };
+		F5FF09351A3ECB8700E8755C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FF09321A3ECB8700E8755C /* MainViewController.m */; };
+		F5FF09381A3ECC4F00E8755C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5FF09361A3ECC4E00E8755C /* MainViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5B4B3521A3ECCC4008C689B /* AutoSuggestionTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSuggestionTextField.h; sourceTree = "<group>"; };
+		F5B4B3531A3ECCC4008C689B /* AutoSuggestionTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSuggestionTextField.m; sourceTree = "<group>"; };
+		F5FF08F91A3EC9E200E8755C /* AutoSuggestionTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoSuggestionTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5FF08FD1A3EC9E200E8755C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5FF08FE1A3EC9E200E8755C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5FF09221A3ECAF500E8755C /* AutoSuggestionTextField-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoSuggestionTextField-Prefix.pch"; sourceTree = "<group>"; };
+		F5FF09251A3ECB7900E8755C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F5FF09281A3ECB7900E8755C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F5FF092D1A3ECB8700E8755C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F5FF092E1A3ECB8700E8755C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F5FF09311A3ECB8700E8755C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F5FF09321A3ECB8700E8755C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F5FF09371A3ECC4E00E8755C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5FF08F61A3EC9E200E8755C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5FF08F01A3EC9E200E8755C = {
+			isa = PBXGroup;
+			children = (
+				F5FF08FB1A3EC9E200E8755C /* AutoSuggestionTextField */,
+				F5FF08FA1A3EC9E200E8755C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5FF08FA1A3EC9E200E8755C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5FF08F91A3EC9E200E8755C /* AutoSuggestionTextField.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5FF08FB1A3EC9E200E8755C /* AutoSuggestionTextField */ = {
+			isa = PBXGroup;
+			children = (
+				F5FF092B1A3ECB8700E8755C /* Classes */,
+				F5FF08FC1A3EC9E200E8755C /* Supporting Files */,
+			);
+			path = AutoSuggestionTextField;
+			sourceTree = "<group>";
+		};
+		F5FF08FC1A3EC9E200E8755C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5FF09231A3ECB7900E8755C /* Resources */,
+				F5FF08FD1A3EC9E200E8755C /* Info.plist */,
+				F5FF08FE1A3EC9E200E8755C /* main.m */,
+				F5FF09221A3ECAF500E8755C /* AutoSuggestionTextField-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5FF09231A3ECB7900E8755C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5FF09241A3ECB7900E8755C /* Images */,
+				F5FF09261A3ECB7900E8755C /* Nibs */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5FF09241A3ECB7900E8755C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F5FF09251A3ECB7900E8755C /* Images.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F5FF09261A3ECB7900E8755C /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				F5FF09271A3ECB7900E8755C /* LaunchScreen.xib */,
+				F5FF09361A3ECC4E00E8755C /* MainViewController.xib */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		F5FF092B1A3ECB8700E8755C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F5FF092C1A3ECB8700E8755C /* AppDelegate */,
+				F5FF092F1A3ECB8700E8755C /* Controllers */,
+				F5FF09331A3ECB8700E8755C /* CustomViews */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F5FF092C1A3ECB8700E8755C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F5FF092D1A3ECB8700E8755C /* AppDelegate.h */,
+				F5FF092E1A3ECB8700E8755C /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F5FF092F1A3ECB8700E8755C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5FF09301A3ECB8700E8755C /* MainViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F5FF09301A3ECB8700E8755C /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F5FF09311A3ECB8700E8755C /* MainViewController.h */,
+				F5FF09321A3ECB8700E8755C /* MainViewController.m */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		F5FF09331A3ECB8700E8755C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4B3521A3ECCC4008C689B /* AutoSuggestionTextField.h */,
+				F5B4B3531A3ECCC4008C689B /* AutoSuggestionTextField.m */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5FF08F81A3EC9E200E8755C /* AutoSuggestionTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5FF091C1A3EC9E200E8755C /* Build configuration list for PBXNativeTarget "AutoSuggestionTextField" */;
+			buildPhases = (
+				F5FF08F51A3EC9E200E8755C /* Sources */,
+				F5FF08F61A3EC9E200E8755C /* Frameworks */,
+				F5FF08F71A3EC9E200E8755C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoSuggestionTextField;
+			productName = AutoSuggestionTextField;
+			productReference = F5FF08F91A3EC9E200E8755C /* AutoSuggestionTextField.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5FF08F11A3EC9E200E8755C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Vikas Jalan";
+				TargetAttributes = {
+					F5FF08F81A3EC9E200E8755C = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = F5FF08F41A3EC9E200E8755C /* Build configuration list for PBXProject "AutoSuggestionTextField" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5FF08F01A3EC9E200E8755C;
+			productRefGroup = F5FF08FA1A3EC9E200E8755C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5FF08F81A3EC9E200E8755C /* AutoSuggestionTextField */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5FF08F71A3EC9E200E8755C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5FF092A1A3ECB7900E8755C /* LaunchScreen.xib in Resources */,
+				F5FF09381A3ECC4F00E8755C /* MainViewController.xib in Resources */,
+				F5FF09291A3ECB7900E8755C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5FF08F51A3EC9E200E8755C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5FF09351A3ECB8700E8755C /* MainViewController.m in Sources */,
+				F5FF09341A3ECB8700E8755C /* AppDelegate.m in Sources */,
+				F5B4B3541A3ECCC4008C689B /* AutoSuggestionTextField.m in Sources */,
+				F5FF08FF1A3EC9E200E8755C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5FF09271A3ECB7900E8755C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5FF09281A3ECB7900E8755C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		F5FF09361A3ECC4E00E8755C /* MainViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5FF09371A3ECC4E00E8755C /* Base */,
+			);
+			name = MainViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5FF091A1A3EC9E200E8755C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5FF091B1A3EC9E200E8755C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5FF091D1A3EC9E200E8755C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "AutoSuggestionTextField/AutoSuggestionTextField-Prefix.pch";
+				INFOPLIST_FILE = AutoSuggestionTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5FF091E1A3EC9E200E8755C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "AutoSuggestionTextField/AutoSuggestionTextField-Prefix.pch";
+				INFOPLIST_FILE = AutoSuggestionTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5FF08F41A3EC9E200E8755C /* Build configuration list for PBXProject "AutoSuggestionTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5FF091A1A3EC9E200E8755C /* Debug */,
+				F5FF091B1A3EC9E200E8755C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5FF091C1A3EC9E200E8755C /* Build configuration list for PBXNativeTarget "AutoSuggestionTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5FF091D1A3EC9E200E8755C /* Debug */,
+				F5FF091E1A3EC9E200E8755C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5FF08F11A3EC9E200E8755C /* Project object */;
+}
