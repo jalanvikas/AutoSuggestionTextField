@@ -162,8 +162,6 @@
             
             self.suggestionTableView.frame = frame;
             [self.suggestionTableView reloadData];
-            
-            return;
         }
     }
     
@@ -178,7 +176,15 @@
         {
             CGRect frm = [[self superview] convertRect:self.frame toView:keyWindow];
             
-            UIView *suggestionTableHolderView = [[UIView alloc] initWithFrame:keyWindow.bounds];
+            UIView *suggestionTableHolderView = [keyWindow viewWithTag:SUGGESTION_TABLE_HOLDER_VIEW_TAG];
+            if (nil == suggestionTableHolderView)
+            {
+                suggestionTableHolderView = [[UIView alloc] initWithFrame:keyWindow.bounds];
+            }
+            else
+            {
+                [suggestionTableHolderView setFrame:keyWindow.bounds];
+            }
             [suggestionTableHolderView setTag:SUGGESTION_TABLE_HOLDER_VIEW_TAG];
             [suggestionTableHolderView setBackgroundColor:[UIColor clearColor]];
             [suggestionTableHolderView addSubview:self.suggestionTableView];
@@ -208,10 +214,10 @@
     if (![self.suggestionTableView isHidden])
         [[self superview] bringSubviewToFront:self];
     
-    [UIView animateWithDuration:0.3
-                     animations:^{
+//    [UIView animateWithDuration:0.3
+//                     animations:^{
                          [self.suggestionTableView setFrame:suggestionTableFrame];
-                     }completion:^(BOOL finished){
+//                     }completion:^(BOOL finished){
                          [self.suggestionTableView setHidden:((0 < suggestionTableHeight)?NO:YES)];
                          if ([self.suggestionTableView isHidden])
                          {
@@ -225,7 +231,7 @@
                                  }
                              }
                          }
-                     }];
+//                     }];
 }
 
 #pragma mark - Custom Methods
