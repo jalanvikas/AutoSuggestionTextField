@@ -169,8 +169,6 @@
     viewFrame.size.height = ((0 < suggestionTableHeight)?suggestionTableHeight:self.bounds.size.height);
     if (suggestionTableHeight > 0)
     {
-        [self.suggestionTableView setFrame:CGRectMake(self.bounds.origin.x, self.bounds.size.height, self.bounds.size.width, 0.0)];
-        
         UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
         if (nil != keyWindow)
         {
@@ -196,7 +194,7 @@
             
             suggestionTableFrame.origin = frm.origin;
             suggestionTableFrame.origin.y += self.bounds.size.height;
-            [self.suggestionTableView setFrame:frm];
+            [self.suggestionTableView setFrame:CGRectMake(frm.origin.x, suggestionTableFrame.origin.y, frm.size.width, self.suggestionTableView.bounds.size.height)];
             
             if ((suggestionTableFrame.origin.y + suggestionTableFrame.size.height) > keyWindow.bounds.size.height)
             {
@@ -214,10 +212,10 @@
     if (![self.suggestionTableView isHidden])
         [[self superview] bringSubviewToFront:self];
     
-//    [UIView animateWithDuration:0.3
-//                     animations:^{
+    [UIView animateWithDuration:0.3
+                     animations:^{
                          [self.suggestionTableView setFrame:suggestionTableFrame];
-//                     }completion:^(BOOL finished){
+                     }completion:^(BOOL finished){
                          [self.suggestionTableView setHidden:((0 < suggestionTableHeight)?NO:YES)];
                          if ([self.suggestionTableView isHidden])
                          {
@@ -231,7 +229,7 @@
                                  }
                              }
                          }
-//                     }];
+                     }];
 }
 
 #pragma mark - Custom Methods
