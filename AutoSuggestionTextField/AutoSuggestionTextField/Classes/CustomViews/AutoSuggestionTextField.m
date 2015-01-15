@@ -109,6 +109,10 @@
 
 - (void)updateSuggestionForString:(NSString *)string
 {
+    if ((nil == self.suggestionItems) || (0 == [self.suggestionItems count]))
+    {
+        return;
+    }
     if ([string length] >= self.noOfCharacterRequiredForSuggestion)
     {
         NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@", string];
