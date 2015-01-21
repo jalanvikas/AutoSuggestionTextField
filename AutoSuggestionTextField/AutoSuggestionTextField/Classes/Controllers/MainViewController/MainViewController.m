@@ -59,10 +59,10 @@
 {
     [super viewDidAppear:animated];
     
-    NSArray *items = [NSArray arrayWithObjects:@"First Object", @"Second Object", @"Third Object", @"Fourth Object", @"Fifth Object", nil];
+    NSArray *items = [NSArray arrayWithObjects:@"Bangalore", @"Delhi", @"Calcutta", @"Mumbai", @"Chennia", nil];
     [self.textField updateWithAvailableSuggestions:items];
     
-    [self.textField setAutoSuggestionTableColor:[UIColor greenColor]];
+    [self.textField setAutoSuggestionTableColor:[UIColor whiteColor]];
     [self.textField setAutoSuggestionTableCellColor:[UIColor clearColor]];
 }
 

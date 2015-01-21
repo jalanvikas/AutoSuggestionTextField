@@ -75,4 +75,6 @@
 
 - (void)setAutoSuggestionTableCellColor:(UIColor *)tableCellColor;
 
+- (void)setShouldShowAllSuggestionsWhenEmpty:(BOOL)showSuggestions;         // Default Yes.
+
 @end

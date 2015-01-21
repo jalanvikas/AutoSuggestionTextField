@@ -36,7 +36,7 @@
 
 #define SUGGESTION_TABLE_HOLDER_VIEW_TAG 5002
 
-#define MIN_CHARACTER_COUNT_FOR_SUGGESTION 2
+#define MIN_CHARACTER_COUNT_FOR_SUGGESTION 1
 
 #define AUTO_SUGGESTION_TABLE_HEIGHT 200
 
@@ -52,6 +52,8 @@
 
 @property (nonatomic, strong) UIColor *autoSuggestTableBackgroundColor;
 @property (nonatomic, strong) UIColor *autoSuggestTableCellColor;
+
+@property (nonatomic, assign) BOOL showAllSuggestions;
 
 #pragma mark - Private Methods
 
@@ -86,6 +88,7 @@
 
 - (void)setupSuggestionView
 {
+    self.showAllSuggestions = YES;
     self.autoSuggestTableBackgroundColor = [UIColor clearColor];
     self.autoSuggestTableCellColor = [UIColor whiteColor];
     self.maxViewHeight = AUTO_SUGGESTION_TABLE_HEIGHT;
@@ -118,6 +121,18 @@
         NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@", string];
         self.filteredSuggestionItems = [self.suggestionItems filteredArrayUsingPredicate:searchPredicate];
         
+        if (0 < [self.filteredSuggestionItems count])
+        {
+            [self shouldShowSuggestionView:YES];
+        }
+        else
+        {
+            [self shouldShowSuggestionView:NO];
+        }
+    }
+    else if (self.showAllSuggestions)
+    {
+        self.filteredSuggestionItems = [NSArray arrayWithArray:self.suggestionItems];
         if (0 < [self.filteredSuggestionItems count])
         {
             [self shouldShowSuggestionView:YES];
@@ -264,6 +279,11 @@
     self.autoSuggestTableCellColor = tableCellColor;
 }
 
+- (void)setShouldShowAllSuggestionsWhenEmpty:(BOOL)showSuggestions
+{
+    self.showAllSuggestions = showSuggestions;
+}
+
 #pragma mark - UITableViewDelegate Methods
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -346,6 +366,7 @@
     {
         [self.autoSuggestionDelegate textFieldDidBeginEditing:textField];
     }
+    [self updateSuggestionForString:textField.text];
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField
