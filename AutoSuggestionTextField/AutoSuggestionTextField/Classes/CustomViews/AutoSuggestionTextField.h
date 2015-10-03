@@ -77,4 +77,8 @@
 
 - (void)setShouldShowAllSuggestionsWhenEmpty:(BOOL)showSuggestions;         // Default Yes.
 
+- (void)setShouldShowDropIndicator:(BOOL)showDropIndicator;     // Default Visible.
+
+- (void)setDropIndicatorImage:(UIImage *)dropIndicatorImage;
+
 @end

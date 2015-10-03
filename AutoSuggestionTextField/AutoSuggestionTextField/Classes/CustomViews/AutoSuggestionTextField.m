@@ -40,6 +40,9 @@
 
 #define AUTO_SUGGESTION_TABLE_HEIGHT 200
 
+#define AUTO_SUGGESTION_DROP_INDICATOR_MIN_WIDTH 35
+#define AUTO_SUGGESTION_DROP_INDICATOR_AVERAGE_WIDTH 15
+
 
 @interface AutoSuggestionTextField () <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate>
 
@@ -54,6 +57,9 @@
 @property (nonatomic, strong) UIColor *autoSuggestTableCellColor;
 
 @property (nonatomic, assign) BOOL showAllSuggestions;
+
+@property (nonatomic, strong) UIButton *dropIndicatorButton;
+@property (nonatomic, assign) BOOL shouldShowDropIndicatorImage;
 
 #pragma mark - Private Methods
 
@@ -89,6 +95,7 @@
 - (void)setupSuggestionView
 {
     self.showAllSuggestions = YES;
+    self.shouldShowDropIndicatorImage = YES;
     self.autoSuggestTableBackgroundColor = [UIColor clearColor];
     self.autoSuggestTableCellColor = [UIColor whiteColor];
     self.maxViewHeight = AUTO_SUGGESTION_TABLE_HEIGHT;
@@ -101,6 +108,21 @@
         [self.suggestionTableView setDelegate:self];
         [self.suggestionTableView setDataSource:self];
         [self addSubview:self.suggestionTableView];
+    }
+    
+    float dropIndicatorImageWidth = MIN(((self.shouldShowDropIndicatorImage)?AUTO_SUGGESTION_DROP_INDICATOR_MIN_WIDTH:0.0), ((self.bounds.size.width * AUTO_SUGGESTION_DROP_INDICATOR_AVERAGE_WIDTH) * 0.01));
+    if (nil == self.dropIndicatorButton)
+    {
+        self.dropIndicatorButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.dropIndicatorButton setUserInteractionEnabled:NO];
+        [self.dropIndicatorButton setEnabled:NO];
+        [self.dropIndicatorButton setContentMode:UIViewContentModeScaleAspectFit];
+        [self.dropIndicatorButton setFrame:CGRectMake((self.bounds.size.width - dropIndicatorImageWidth), 0.0, dropIndicatorImageWidth, self.bounds.size.height)];
+        [self.dropIndicatorButton setBackgroundColor:[UIColor clearColor]];
+        [self.dropIndicatorButton setImage:[UIImage imageNamed:@"autoSuggestDropIndicator.png"] forState:UIControlStateNormal];
+        [self setRightView:self.dropIndicatorButton];
+        
+        [self setRightViewMode:UITextFieldViewModeAlways];
     }
     
     [self.suggestionTableView setHidden:YES];
@@ -282,6 +304,17 @@
 - (void)setShouldShowAllSuggestionsWhenEmpty:(BOOL)showSuggestions
 {
     self.showAllSuggestions = showSuggestions;
+}
+
+- (void)setShouldShowDropIndicator:(BOOL)showDropIndicator
+{
+    self.shouldShowDropIndicatorImage = showDropIndicator;
+    [self setRightViewMode:((showDropIndicator)?UITextFieldViewModeAlways:UITextFieldViewModeNever)];
+}
+
+- (void)setDropIndicatorImage:(UIImage *)dropIndicatorImage
+{
+    [self.dropIndicatorButton setImage:dropIndicatorImage forState:UIControlStateNormal];
 }
 
 #pragma mark - UITableViewDelegate Methods
